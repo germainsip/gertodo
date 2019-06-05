@@ -1,29 +1,29 @@
 # gertodo
 
-## Project setup
+Un simple petit projet en Electron.
+
+Le projet est toujours en cours de developpement. Vous pouvez quand même le compiler sur votre plateforme en suivant les indications qui suivent:
+
+## Pré requis
+**node** et **yarn** sur votre machine
+
+
+## Configuration du projet
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Compiler en mode dev
 ```
 yarn run serve
 ```
 
-### Compiles and minifies for production
+### Compiler 
 ```
 yarn run build
 ```
 
-### Run your tests
-```
-yarn run test
-```
 
-### Lints and fixes files
-```
-yarn run lint
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
