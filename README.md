@@ -19,15 +19,13 @@ yarn install
 ### Compiler en mode dev
 
 ``` zsh
-yarn run serve
+yarn electron:server
 ```
 
 ### Compiler
 
 ``` zsh
-yarn run build
+yarn electron:build
 ```
 
-### Customize configuration
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
