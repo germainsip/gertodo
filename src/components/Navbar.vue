@@ -7,10 +7,14 @@
         <span>de Germain</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-
-      <v-btn icon href="https://github.com/germainsip" target="_blank">
-        <v-icon>fab fa-github</v-icon>
+ <v-btn flat color="grey">
+        <span>Déconnection</span>
+        <v-icon right>exit_to_app</v-icon>
       </v-btn>
+      <v-btn icon href="https://github.com/germainsip" target="_blank">
+        <v-icon color="grey">fab fa-github</v-icon>
+      </v-btn>
+     
     </v-toolbar>
     <v-navigation-drawer v-model="drawer" app>
        <v-list>

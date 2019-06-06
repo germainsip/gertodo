@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
-    <v-container grid-list-md>
-      <span>
-        <v-img :src="require('@/assets/logoG.png')" contain height="150"></v-img>
+  <div class="dashboard">
+    <v-container class="my-5">
+ <span>
+        <v-img :src="require('@/assets/logoG.png')" contain height="170" class="mb-4"></v-img>
       </span>
       <h1 class="display-2">
         Salut je suis une app 
@@ -11,7 +11,9 @@
       
       
       <v-btn block dark color="indigo">Commencer<v-icon right>fas fa-door-open</v-icon></v-btn>
+   
     </v-container>
+     
   </div>
 </template>
 
