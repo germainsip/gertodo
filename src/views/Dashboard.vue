@@ -31,7 +31,7 @@
       flat
       @click.stop="dialog = true"
     >
-      <v-icon color="grey">far fa-question-circle</v-icon>
+      <v-icon color="grey"></v-icon>far fa-question-circle</v-icon>
     </v-btn></h1>
     <v-container class="my-5">
       <v-card class="my-1" v-for="project in projects" :key="project.title">
