@@ -1,12 +1,11 @@
 <template>
   <div class="dashboard">
-    <v-container class="my-5">
+    <v-container >
       
     <v-dialog
       v-model="dialog"
       hide-overlay
       persistent
-      width="300"
     >
       <v-card  class="pa-3">
         <span>
@@ -15,12 +14,12 @@
         <h1 class="display-2">
           Salut, je suis une app
           <span class="text-uppercase light-green--text">electron</span>
-          
+           de gestion de tâches
         </h1>
 <p class="subheading">Adaptée sur un Tuto de "The Net Ninja"</p>
         <v-btn block dark color="indigo" @click="dialog = false">
-          Commencer
-          <v-icon right>fas fa-door-open</v-icon>
+          Compris
+          <v-icon right>fas fa-thumbs-up</v-icon>
         </v-btn>
       </v-card>
       </v-dialog>
@@ -31,21 +30,37 @@
       flat
       @click.stop="dialog = true"
     >
-      <v-icon color="grey"></v-icon>far fa-question-circle</v-icon>
+      <v-icon color="grey">far fa-question-circle</v-icon>
     </v-btn></h1>
-    <v-container class="my-5">
+    <v-container class="my-2">
+      <v-layout row class="mb-3">
+        <v-tooltip top>
+<v-btn small flat color="grey" @click="sortBy('title')" slot="activator">
+          <v-icon left small>folder</v-icon>
+          <span class="caption text-lowercase">Par nom de Projet</span>
+        </v-btn>
+        <span>Trier les projets par noms</span>
+        </v-tooltip>
+        <v-tooltip top>
+<v-btn small flat color="grey" @click="sortBy('person')" slot="activator">
+          <v-icon left small>person</v-icon>
+          <span class="caption text-lowercase">Par Acteur</span>
+        </v-btn>
+        <span>Trier les projets par acteurs</span>
+        </v-tooltip>
+      </v-layout>
       <v-card class="my-1" v-for="project in projects" :key="project.title">
         <v-layout row wrap :class="`pa-3 project ${project.status}`">
           <v-flex xs12 md6>
-            <div class="caption grey--text">Project Title</div>
+            <div class="caption grey--text">Titre</div>
             <div>{{project.title}}</div>
           </v-flex>
           <v-flex xs6 sm4 md2>
-            <div class="caption grey--text">Person</div>
+            <div class="caption grey--text">Acteur</div>
             <div>{{project.person}}</div>
           </v-flex>
           <v-flex xs6 sm4 md2>
-            <div class="caption grey--text">due by</div>
+            <div class="caption grey--text">Prévu</div>
             <div>{{project.due}}</div>
           </v-flex>
           <v-flex xs2 sm4 md2>
@@ -99,6 +114,11 @@ export default {
         }
       ]
     };
+  },
+   methods: {
+    sortBy(prop) {
+      this.projects.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
+    }
   }
 };
 </script>
