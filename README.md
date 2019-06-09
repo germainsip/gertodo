@@ -27,5 +27,5 @@ yarn electron:server
 ``` zsh
 yarn electron:build
 ```
-
+L'idée est d'adapter à mon goût une application todo faite en vuetify (origine: netninja) avec electron.
 
