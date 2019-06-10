@@ -125,21 +125,21 @@ export default {
 
 <style>
 .project.fait {
-  border-left: 4px solid #3cd1c2;
+  border-left: 4px solid #0C5B5A;
 }
 .project.commencé {
-  border-left: 4px solid orange;
+  border-left: 4px solid #F55F14;
 }
 .project.dépassé {
-  border-left: 4px solid tomato;
+  border-left: 4px solid #D52339;
 }
 .v-chip.fait{
-  background: #3cd1c2;
+  background: #0C5B5A;
 }
 .v-chip.commencé{
-  background: #ffaa2c;
+  background: #F55F14;
 }
 .v-chip.dépassé{
-  background: #f83e70;
+  background: #D52339;
 }
 </style>
