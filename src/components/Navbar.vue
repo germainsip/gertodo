@@ -17,6 +17,16 @@
      
     </v-toolbar>
     <v-navigation-drawer v-model="drawer" app class="info">
+      <v-layout column align-center>
+        <v-flex class="mt-5">
+          <v-avatar size="100" class="elevation-3">
+            <img src="/moitrav2.jpg" >
+          </v-avatar>
+          <p class="white--text subheading mt-1">
+            GermainSip
+          </p>
+        </v-flex>
+      </v-layout>
        <v-list>
           <v-list-tile v-for="link in links" :key="link.text" router :to="link.route">
               <v-list-tile-action>
