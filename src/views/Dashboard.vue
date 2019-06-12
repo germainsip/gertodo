@@ -1,52 +1,47 @@
 <template>
   <div class="dashboard">
-    <v-container >
-      
-    <v-dialog
-      v-model="dialog"
-      hide-overlay
-      persistent
-    >
-      <v-card  class="pa-3">
-        <span>
-          <v-img :src="require('@/assets/logoG.png')" contain height="170" class="mb-4"></v-img>
-        </span>
-        <h1 class="display-2">
-          Salut, je suis une app
-          <span class="text-uppercase light-green--text">electron</span>
-           de gestion de tâches
-        </h1>
-<p class="subheading">Adaptée sur un Tuto de "The Net Ninja"</p>
-        <v-btn block dark color="indigo" @click="dialog = false">
-          Compris
-          <v-icon right>fas fa-thumbs-up</v-icon>
-        </v-btn>
-      </v-card>
+    <!-- <v-container> -->
+      <v-dialog v-model="dialog" hide-overlay persistent>
+        <v-card class="pa-3">
+          <span>
+            <v-img :src="require('@/assets/logoG.png')" contain height="170" class="mb-4"></v-img>
+          </span>
+          <h1 class="display-2">
+            Salut, je suis une app
+            <span class="text-uppercase light-green--text">electron</span>
+            de gestion de tâches
+          </h1>
+          <p class="subheading">Adaptée sur un Tuto de "The Net Ninja"</p>
+          <v-btn block dark color="indigo" @click="dialog = false">
+            Compris
+            <v-icon right>fas fa-thumbs-up</v-icon>
+          </v-btn>
+        </v-card>
       </v-dialog>
-    </v-container>
+    <!-- </v-container> -->
+
     
-    <h1 class="subheading grey--text">Tableau de bord <v-btn
-      icon
-      flat
-      @click.stop="dialog = true"
-    >
-      <v-icon color="grey">far fa-question-circle</v-icon>
-    </v-btn></h1>
     <v-container class="my-2">
+      <h1 class="subheading grey--text">
+      Tableau de bord
+      <v-btn icon flat @click.stop="dialog = true">
+        <v-icon color="grey">far fa-question-circle</v-icon>
+      </v-btn>
+    </h1>
       <v-layout row class="mb-3">
         <v-tooltip top>
-<v-btn small flat color="grey" @click="sortBy('title')" slot="activator">
-          <v-icon left small>folder</v-icon>
-          <span class="caption text-lowercase">Par nom de Projet</span>
-        </v-btn>
-        <span>Trier les projets par noms</span>
+          <v-btn small flat color="grey" @click="sortBy('title')" slot="activator">
+            <v-icon left small>folder</v-icon>
+            <span class="caption text-lowercase">Par nom de Projet</span>
+          </v-btn>
+          <span>Trier les projets par noms</span>
         </v-tooltip>
         <v-tooltip top>
-<v-btn small flat color="grey" @click="sortBy('person')" slot="activator">
-          <v-icon left small>person</v-icon>
-          <span class="caption text-lowercase">Par Acteur</span>
-        </v-btn>
-        <span>Trier les projets par acteurs</span>
+          <v-btn small flat color="grey" @click="sortBy('person')" slot="activator">
+            <v-icon left small>person</v-icon>
+            <span class="caption text-lowercase">Par Acteur</span>
+          </v-btn>
+          <span>Trier les projets par acteurs</span>
         </v-tooltip>
       </v-layout>
       <v-card class="my-1" v-for="project in projects" :key="project.title">
@@ -115,7 +110,7 @@ export default {
       ]
     };
   },
-   methods: {
+  methods: {
     sortBy(prop) {
       this.projects.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
     }
@@ -125,21 +120,21 @@ export default {
 
 <style>
 .project.fait {
-  border-left: 4px solid #0C5B5A;
+  border-left: 4px solid #0c5b5a;
 }
 .project.commencé {
-  border-left: 4px solid #F55F14;
+  border-left: 4px solid #f55f14;
 }
 .project.dépassé {
-  border-left: 4px solid #D52339;
+  border-left: 4px solid #d52339;
 }
-.v-chip.fait{
-  background: #0C5B5A;
+.v-chip.fait {
+  background: #0c5b5a;
 }
-.v-chip.commencé{
-  background: #F55F14;
+.v-chip.commencé {
+  background: #f55f14;
 }
-.v-chip.dépassé{
-  background: #D52339;
+.v-chip.dépassé {
+  background: #d52339;
 }
 </style>
