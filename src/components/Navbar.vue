@@ -1,5 +1,9 @@
 <template>
   <nav>
+    <v-snackbar v-model="snackbar" :timeout="4000" top color="info">
+  <span>Super vous avez ajouté un projet</span>
+  <v-btn flat color="white" @click="snackbar=false">fermer</v-btn>
+</v-snackbar>
     <v-toolbar app>
         <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title class="text-uppercase">
@@ -41,7 +45,7 @@
           </p>
         </v-flex>
         <v-flex class="mt-4 mb-3">
-          <Popup/>
+          <Popup @projectAdded="snackbar=true"/>
         </v-flex>
       </v-layout>
        <v-list>
@@ -68,7 +72,8 @@ export default {
         { icon: "dashboard", text: "Tableau de bord", route: "/" },
         { icon: "fas fa-beer", text: "Mes Projets", route: "/projects" },
         { icon: "person", text: "Equipe", route: "/team" }
-      ]
+      ],
+      snackbar: false
         }
     },
 };

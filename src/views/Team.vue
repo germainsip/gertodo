@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       team: [
-        { name: "Moi", role: "Concepteur, Développeur",  avatar: '/commercial.png '},
+        { name: "Be Be", role: "Concepteur, Développeur",  avatar: '/commercial.png '},
         { name: "Ryu", role: "Graphic designer", avatar: '/avatar-2.png ' },
         { name: "Chun Li", role: "Web developer", avatar: '/avatar-3.png '},
         { name: "Gouken", role: "Social media maverick", avatar: '/avatar-4.png ' },
