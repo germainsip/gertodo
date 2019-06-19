@@ -15,19 +15,19 @@ Le projet est toujours en cours de developpement. Vous pouvez quand même le com
 
 ## Configuration du projet
 
-``` zsh
+``` sh
 yarn install
 ```
 
 ### Compiler en mode dev
 
-``` zsh
+``` sh
 yarn electron:serve
 ```
 
 ### Compiler
 
-``` zsh
+``` sh
 yarn electron:build
 ```
 L'idée est d'adapter à mon goût une application todo faite en vuetify (origine: netninja) avec electron.
